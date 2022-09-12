@@ -40,24 +40,20 @@ Console.WriteLine(" ");
 Console.WriteLine("*** Давайте найдем координаты пересечения прямых ***");
 Console.WriteLine(" ");
 
-void IntersectionPoint(int b1, int k1, int b2, int k2)
+void IntersectionPoint(double b1, double k1, double b2, double k2)
 {
-    double s = b2 - b1; // не понимаю почему подобная запись в одну строку считает не правильно 
-    double d = k1 - k2; // double x =  (b2 - b1) / (k1 - k2) выдает 0
-    double x = s/d;
-    double f = k1 * x;
-    double y = f + b1; // double y = (k1 * x) + b1 выдает 2
+    double x =  (b2 - b1) / (k1 - k2); 
+    double y = (k1 * x) + b1; 
     Console.WriteLine($"# Координаты точки пересечения: Х= {x}, Y= {y}");
 }
 
-int b1 = 2, k1 = 5, b2 = 4, k2 = 9;
 // Ввод данных // Точки прямых
-//Console.Write ("# Введите координат точки b1: "); 
-//int b1 = Convert.ToInt32(Console.ReadLine());
-//Console.Write ("# Введите координат точки k1: "); 
-//int k1 = Convert.ToInt32(Console.ReadLine());
-//Console.Write ("# Введите координат точки b2: "); 
-//int b2 = Convert.ToInt32(Console.ReadLine());
-//Console.Write ("# Введите координат точки k2: "); 
-//int k2 = Convert.ToInt32(Console.ReadLine());
+Console.Write ("# Введите координат точки b1: "); 
+double b1 = Convert.ToInt32(Console.ReadLine());
+Console.Write ("# Введите координат точки k1: "); 
+double k1 = Convert.ToInt32(Console.ReadLine());
+Console.Write ("# Введите координат точки b2: "); 
+double b2 = Convert.ToInt32(Console.ReadLine());
+Console.Write ("# Введите координат точки k2: "); 
+double k2 = Convert.ToInt32(Console.ReadLine());
 IntersectionPoint(b1, k1, b2, k2);
